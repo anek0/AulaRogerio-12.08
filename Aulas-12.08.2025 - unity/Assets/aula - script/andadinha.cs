@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
         float moveInput = Input.GetAxis("Horizontal");
 
        
-        rb.velocity = new Vector2(moveInput * velocidadeAndar, rb.velocity.y);
+        rb.linearVelocity = new Vector2(moveInput * velocidadeAndar, rb.linearVelocity.y);
     }
 
     private void MovimentoVoo()
@@ -63,6 +63,6 @@ public class PlayerController : MonoBehaviour
         Vector2 movimento = new Vector2(moveInputHorizontal, moveInputVertical);
 
         
-        rb.velocity = movimento * velocidadeVoo;
+        rb.linearVelocity = movimento * velocidadeVoo;
     }
 }
